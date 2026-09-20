@@ -1,9 +1,9 @@
-#!/usr/bin/env fish
+#!/usr/bin/env zsh
 
 set -Ux STARSHIP_CONFIG $argv[1]/starship.toml
 set color ~/.config/hypr/scripts/color
 
-pkill -USR2 fish
+pkill -USR2 zsh
 
 hyprctl keyword general:col.active_border "0xff$($color cursor -n)"
 hyprctl keyword general:col.inactive_border "0xff$($color 8 -n)"
